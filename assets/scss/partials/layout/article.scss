@@ -41,6 +41,28 @@
         }
     }
 
+    .main-article-outside-image {
+        overflow: hidden;
+        margin-bottom: 2%;
+
+        .article-header {
+            .article-image {
+                img {
+                    height: auto;
+                    width: 100%;
+                    max-height: 50vh;
+                    object-fit: cover;
+                }
+            }
+
+            .article-details {
+                padding: var(--card-padding);
+                padding-bottom: 0;
+            }
+        }
+
+    }
+
     .main-article {
         background: var(--card-background);
         border-radius: var(--card-border-radius);

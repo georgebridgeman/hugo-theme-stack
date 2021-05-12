@@ -1,19 +1,15 @@
 {{ define "main" }}
-    <h3 class="section-title">
-        {{ if eq .Parent (.GetPage "/") }}
-            {{ T "list.section" }}
-        {{ else }}
-            {{ .Parent.Title }}
-        {{ end }}
-    </h3>
 
     <div class="section-card">
         <div class="section-details">
-            <h3 class="section-count">{{ T "list.page" (len .Pages) }}</h3>
             <h1 class="section-term">{{ .Title }}</h1>
             {{ with .Params.description }}
-                <h2 class="section-description">{{ . }}</h2>
+            <h2 class="section-description">{{ . }}</h2>
             {{ end }}
+            {{ with .Content }}
+            {{ . }}
+            {{ end }}
+            <h3 class="section-count">{{ T "list.page" (len .Pages) }}</h3>
         </div>
 
         {{- $image := partialCached "helper/image" (dict "Context" . "Type" "section") .RelPermalink "section" -}}
@@ -53,6 +49,7 @@
     {{- end -}}
 
     {{- with $subsections -}}
+    
         <h2 class="section-title">{{ T "list.subsection" (len $subsections) }}</h2>
         <div class="subsection-list">
             <div class="article-list--tile">

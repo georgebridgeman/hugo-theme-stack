@@ -6,6 +6,7 @@
     margin-bottom: var(--section-separation);
     display: flex;
     align-items: center;
+    color: var(--card-text-color-secondary);
 
     --separation: 15px;
 
@@ -17,12 +18,12 @@
 
         & + .section-description {
             margin-top: var(--separation);
+            margin-bottom: var(--separation);
         }
     }
 
     .section-description {
         font-weight: normal;
-        color: var(--card-text-color-secondary);
         font-size: 1.6rem;
         margin: 0;
     }
