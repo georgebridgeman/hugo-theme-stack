@@ -47,6 +47,8 @@ search:
         other: "#PAGES_COUNT pages (#TIME_SECONDS seconds)"
 
 footer:
+    disclaimer:
+        other: All content on this site is my own and does not necessarily reflect the views of any of my employers or clients, past or present.
     builtWith:
         other: Built with {{ .Generator }}
     designedBy:

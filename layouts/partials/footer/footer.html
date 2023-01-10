@@ -18,6 +18,7 @@
         {{- $DesignedBy := `<a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>` -}}
         {{- $Forked := printf `<b><a href="https://github.com/georgebridgeman/hugo-theme-stack" target="_blank" rel="noopener">forked</a></b>` -}}
 
+        {{ T "footer.disclaimer" | safeHTML }} <br />
         {{ T "footer.builtWith" (dict "Generator" $Generator) | safeHTML }} <br />
         {{ T "footer.designedBy" (dict "Theme" $Theme "DesignedBy" $DesignedBy "Forked" $Forked) | safeHTML }}
     </section>
